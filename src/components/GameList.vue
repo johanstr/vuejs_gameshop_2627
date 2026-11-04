@@ -1,16 +1,13 @@
 <template>
-   <GameCard v-for="game_detail in props.games" :key="game_detail.id" :game="game_detail" />
+   <GameCard v-for="game_detail in store.getGames" :key="game_detail.id" :game="game_detail" />
 </template>
 
 <script setup>
 import GameCard from './GameCard.vue'
+import { useGameStore } from '../store/index.js'
 
-const props = defineProps({
-   games: {
-      type: Array,
-      required: true
-   }
-})
+const store = useGameStore()
+
 </script>
 
 <style scoped>

@@ -28,7 +28,9 @@
          <span class="badge text-bg-primery position-relative">
             <i class="las la-shopping-cart icon-size text-white">
                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger cart-badge">
-                  0
+                  {{
+                     store.cartCount
+                  }}
                </span>
                <span class="visually-hidden">Items in cart</span>
             </i>
@@ -40,5 +42,8 @@
 
 <script setup>
 import { RouterLink } from 'vue-router'
+import { useGameStore } from '../store/index.js'
+
+const store = useGameStore()
 
 </script>

@@ -8,7 +8,11 @@
                <div class="btn-group">
                   <button type="button" class="btn btn-sm btn-outline-secondary">
                      <i class="las la-info-circle icon-size"></i> Info</button>
-                  <button type="button" class="btn btn-sm btn-danger">
+                  
+                  <button 
+                     type="button" class="btn btn-sm btn-danger"
+                     @click="addToCart()"
+                  >
                      <i class="las la-shopping-cart icon-size text-white"></i> Buy</button>
                </div>
                <small class="text-muted">€ {{ props.game.price }}</small>
@@ -21,6 +25,10 @@
 
 
 <script setup>
+import { useGameStore } from '../store/index.js'
+
+const store = useGameStore()
+
 const props =defineProps({
    game: {
       type: Object,
@@ -28,12 +36,10 @@ const props =defineProps({
    }
 })
 
-if (props.game.id == 1)
-{
-   console.log("Game ID is 1");
-   
+function addToCart() {
+   // Implement the logic to add the game to the cart
+   store.addToCart(props.game);
 }
-
 </script>
 
 <style scoped>
