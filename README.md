@@ -37,10 +37,10 @@ Je hebt standaard al de beschikking over een uitermate geschikte terminal omgevi
 Via de Microsoft App Store kun je, als dit nog niet gebeurd is, Windows Terminal installeren. Standaard zal deze opstarten met PowerShell, maar in principe is CMD meer dan voldoende.  
   
 # Starten met een nieuw project
-Je kunt een nieuw starten door het volgende in de terminal in te tikken (let op! Vervang <projectfolder naam> door een logische en beschrijvende naam die je zelf bedenkt):  
+Je kunt een nieuw starten door het volgende in de terminal in te tikken (let op! Vervang **[projectfolder naam]** door een logische en beschrijvende naam die je zelf bedenkt):  
   
 ```bash
-vue create <projectfolder naam>
+vue create [projectfolder naam]
 ```  
   
 Volg de stappen die Vue CLI je aanbied.  
@@ -50,14 +50,14 @@ Slim is voor elk project sowieso de uitbreiding ***router*** te selecteren in de
 Je kiest eerst de map waar je de code van deze repo wilt installeren.  
   
 ## STAP 1 - Binnenhalen van de code van deze repo
-In de terminal tik je de volgende opdracht (let op! Als je de map die aangemaakt wordt zo een andere naam wilt geven vervang je [eigen naam aan de map] door een logische en beschrijvende zelf gekozen mapnaam. Als je dat niet doet krijgt de map automatisch de naam van de repo):  
+In de terminal tik je de volgende opdracht (let op! Als je de map die aangemaakt wordt zo een andere naam wilt geven vervang je **[eigen naam aan de map]** door een logische en beschrijvende zelf gekozen mapnaam. Als je dat niet doet krijgt de map automatisch de naam van de repo):  
   
 ```bash
 git clone https://github.com/johanstr/vuejs_gameshop_2627 [eigen naam aan de map]
 ```  
 
 ## STAP 2 - Project setup
-Vervang in onderstaande opdracht [naam van de projectmap] door de naam van map die je zojuist hebt aangemaakt.
+Vervang in onderstaande opdracht **[naam van de projectmap]** door de naam van map die je zojuist hebt aangemaakt.
 ```bash
 cd [naam van de projectmap]
 npm install
