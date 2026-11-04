@@ -19,81 +19,7 @@ export const useGameStore = defineStore('game_store', () => {
     *    ...
     * ]
     */
-   const games = ref([
-      {
-      "id":1,
-      "title":"Ryse",
-      "description":"Ryse: Son of Rome is a third-person action-adventure hack and slash video game developed by Crytek and published by Microsoft Studios.",
-      "image":"https://gamesapi.sd-alfa.nl/img/ryse.jpeg",
-      "price":"19.95",
-      "created_at":"2019-05-23T10:19:38.000000Z"
-   },
-   {
-      "id":2,
-      "title":"Amnesia",
-      "description":"Amnesia: The Dark Descent, a first person survival horror. A game about immersion, discovery and living through a nightmare. ",
-      "image":"https://gamesapi.sd-alfa.nl/img/amnesia.jpeg",
-      "price":"29.95",
-      "created_at":"2019-05-23T10:19:38.000000Z"
-   },
-   {
-      "id":3,
-      "title":"Avatar",
-      "description":"James Cameron's Avatar: The Game is a 2009 third-person action video game based on James Cameron's 2009 film Avatar. ",
-      "image":"https://gamesapi.sd-alfa.nl/img/avatar.jpeg",
-      "price":"39.95",
-      "created_at":"2019-05-23T10:20:25.000000Z"
-   },
-   {
-      "id":4,
-      "title":"Horizon Zero Dawn",
-      "description":"Horizon Zero Dawn is een actierollenspel ontwikkeld door Guerrilla Games. ",
-      "image":"https://gamesapi.sd-alfa.nl/img/horizonzerodawn.jpeg",
-      "price":"39.95",
-      "created_at":"2019-05-23T10:20:25.000000Z"
-   },
-   {
-      "id":5,
-      "title":"Just Cause",
-      "description":"Just Cause 2 is een third-person shooter sandboxspel ontwikkeld door Eidos Interactive en Avalanche Studios.",
-      "image":"https://gamesapi.sd-alfa.nl/img/justcause.jpeg",
-      "price":"49.95",
-      "created_at":"2019-05-23T10:21:03.000000Z"
-   },
-   {
-      "id":6,
-      "title":"Project Cars",
-      "description":"Project CARS is a motorsport racing simulator video game developed by Slightly Mad Studios. ",
-      "image":"https://gamesapi.sd-alfa.nl/img/projectcars.jpeg",
-      "price":"39.95",
-      "created_at":"2019-05-23T10:21:03.000000Z"
-   },
-   {
-      "id":7,
-      "title":"Prototype 2",
-      "description":"Prototype 2 is a 2012 open world action-adventure video game. Developed by Canadian studio Radical Entertainment.",
-      "image":"https://gamesapi.sd-alfa.nl/img/prototype2.jpeg",
-      "price":"39.95",
-      "created_at":"2019-05-23T10:21:49.000000Z"
-   },
-   {
-      "id":8,
-      "title":"Trine",
-      "description":"Trine is a side-scrolling, action platform-puzzle video game developed by Frozenbyte and published by Nobilis. ",
-      "image":"https://gamesapi.sd-alfa.nl/img/trine.jpeg",
-      "price":"49.95",
-      "created_at":"2019-05-23T10:21:49.000000Z"
-   },
-   {
-      "id":9,
-      "title":"Watchdogs",
-      "description":"Watch Dogs is een open wereld-, action-adventure- en third-person shooter-spel ontwikkeld door Ubisoft Montreal en enkele andere dochterondernemingen van Ubisoft. ",
-      "image":"https://gamesapi.sd-alfa.nl/img/watchdogs.jpeg",
-      "price":"19.95",
-      "created_at":"2019-05-23T10:22:15.000000Z"
-   }
-
-   ]);
+   const games = ref([]);
    /**
     * Shoppingcart
     * Structure (Array of objects):
@@ -158,14 +84,14 @@ export const useGameStore = defineStore('game_store', () => {
    // Load games from API
    async function loadGames() {
       // TODO:Load games from API
-      // const URI = '@/public/games.json';
-      // try {
-      //    const response = await fetch(URI);
-      //    const data = await response.json();
-      //    games.value = data;
-      // } catch (error) {
-      //    console.error('Error loading games:', error);
-      // }
+      const URI = 'https://gamesapi.sd-alfa.nl';
+      try {
+         const response = await fetch(URI);
+         const data = await response.json();
+         games.value = data;
+      } catch (error) {
+         console.error('Error loading games:', error);
+      }
    }
 
    // Find a game by its ID
