@@ -30,13 +30,13 @@ De VueJS Command Line maakt het een stuk makkelijker om een project te starten. 
 Je vind de tool via de volgende link: [VueJS CLI](https://cli.vuejs.org/).  
   
 ### Terminal omgeving
-## Linux & MacOS
+#### Linux & MacOS
 Je hebt standaard al de beschikking over een uitermate geschikte terminal omgeving (Bash).  
   
-### Windows
+#### Windows
 Via de Microsoft App Store kun je, als dit nog niet gebeurd is, Windows Terminal installeren. Standaard zal deze opstarten met PowerShell, maar in principe is CMD meer dan voldoende.  
   
-## Starten met een nieuw project
+# Starten met een nieuw project
 Je kunt een nieuw starten door het volgende in de terminal in te tikken (let op! Vervang <projectfolder naam> door een logische en beschrijvende naam die je zelf bedenkt):  
   
 ```bash
